@@ -17,8 +17,7 @@ public class SongsController {
 
     @GetMapping("/{id}")
     public Song getSong(@PathVariable("id") Integer id) {
-//        log.info("Received song request. Id: " + id);
-        System.out.println("Received song request. Id: " + id);
+        log.info("Received song request. Id: " + id);
         return songsProvider.getById(id);
     }
 }
